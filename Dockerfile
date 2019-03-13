@@ -14,11 +14,11 @@ apt -y autoremove && \
 apt -y autoclean && \
 apt -y clean && \
 cd /opt && \
-git clone https://github.com/mxe/mxe.git && \
-cd /opt/mxe && \
+# git clone https://github.com/mxe/mxe.git && \
+# cd /opt/mxe && \
 NPROC=$(nproc) && \
-make --jobs=$NPROC JOBS=$NPROC MXE_TARGETS='i686-w64-mingw32.static' qtbase qtmultimedia && \
-ln -s /opt/mxe/usr/bin/i686-w64-mingw32.static-qmake-qt5 /usr/bin/qmake && \
-qmake --version && \
+# make --jobs=$NPROC JOBS=$NPROC MXE_TARGETS='i686-w64-mingw32.static' qtbase qtmultimedia && \
+# ln -s /opt/mxe/usr/bin/i686-w64-mingw32.static-qmake-qt5 /usr/bin/qmake && \
+# qmake --version && \
 exit 0
 ENV PATH="${PATH}:/opt/mxe/usr/bin"
