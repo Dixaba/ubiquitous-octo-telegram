@@ -9,7 +9,7 @@ apt -y install build-essential iputils-ping nano \
 #     libtool-bin libltdl-dev libssl-dev libxml-parser-perl make \
 #     openssl p7zip-full patch perl pkg-config python ruby scons \
 #     sed unzip lzip wget xz-utils \
-#     g++-multilib libc6-dev-i386 && \
+    g++-multilib libc6-dev-i386 && \
 # apt -y autoremove && \
 # apt -y autoclean && \
 # apt -y clean && \
