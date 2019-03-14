@@ -1,5 +1,4 @@
 FROM ubuntu:16.04
-ENTRYPOINT /bin/bash
 RUN \
 apt -y update && \
 apt -y upgrade && \
@@ -22,3 +21,5 @@ ln -s /opt/mxe/usr/bin/i686-w64-mingw32.static-qmake-qt5 /usr/bin/qmake && \
 qmake --version && \
 exit 0
 ENV PATH="${PATH}:/opt/mxe/usr/bin"
+WORKDIR /project/build
+CMD qmake /project/source && make -j $(nproc)
