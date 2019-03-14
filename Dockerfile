@@ -1,16 +1,15 @@
 FROM ubuntu:16.04
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT /bin/bash
 RUN \
 apt -y update && \
 apt -y upgrade && \
-apt -y install build-essential iputils-ping nano \
-    autoconf automake autopoint bash bison bzip2 flex gettext \
-    ls \
+# apt -y install build-essential iputils-ping nano \
+#     autoconf automake autopoint bash bison bzip2 flex gettext \
 #     git g++ gperf intltool libffi-dev libgdk-pixbuf2.0-dev \
 #     libtool-bin libltdl-dev libssl-dev libxml-parser-perl make \
 #     openssl p7zip-full patch perl pkg-config python ruby scons \
 #     sed unzip lzip wget xz-utils \
-    g++-multilib libc6-dev-i386 && \
+    # g++-multilib libc6-dev-i386 && \
 # apt -y autoremove && \
 # apt -y autoclean && \
 # apt -y clean && \
